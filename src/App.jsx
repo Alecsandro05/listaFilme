@@ -1,9 +1,9 @@
-import MovieList from "./components/MovieList"
 import { Navbar } from "./components/Navbar"
+import MovieList from "./components/MovieList"
 
 function App() {
   return (
-    <div className="h-screen overflow-x-hidden ">
+    <div className="flex bg-zinc-800">
       <Navbar />
       <MovieList />
     </div>

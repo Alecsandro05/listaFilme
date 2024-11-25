@@ -1,19 +1,39 @@
 // import { Search } from "lucide-react"
 
+import { Bell, CircleCheck, Heart } from "lucide-react"
+
 export function Navbar() {
   return (
-    <header className="w-screen bg-[#242A32] p-10">
-      <nav className="w-full flex justify-between">
-        <h1 className="font-bold text-2xl text-zinc-50 ">Filmes</h1>
-        {/* <div className=" h-14 px-8 bg-[#3A3F47] cursor-pointer border-zinc-800 rounded-lg flex items-center gap-4">
-          <Search className="text-zinc-200 size-5" />
-          <input
-            type="text"
-            placeholder="Busque um filme"
-            className="bg-transparent text-lg text-zinc-400 outline-none w-full"
-          />
-        </div> */}
-      </nav>
-    </header>
+    <nav className="bg-zinc-950 w-[220px]  text-white ">
+      <div className="flex flex-col items-center py-6">
+        <h1 className="text-2xl font-bold">DXX.MOVIES</h1>
+      </div>
+      <div>
+        <ul className="flex flex-col px-9 space-y-6 py-10">
+          <span className="text-zinc-500">New feed</span>
+          <li className="flex gap-3 cursor-pointer">
+            <CircleCheck />
+            Browse
+          </li>
+          <li className="flex gap-3 cursor-pointer">
+            <Heart />
+            Watchlist
+          </li>
+          <li className="flex gap-3 cursor-pointer">
+            <Bell />
+            Remind
+          </li>
+        </ul>
+
+        <ul className="flex flex-col px-9 space-y-6 py-10">
+          <span className="text-zinc-500">CATEGORIES</span>
+          <li>Action</li>
+          <li>Horror</li>
+          <li>Advanture</li>
+          <li>war</li>
+          <li>Crime</li>
+        </ul>
+      </div>
+    </nav>
   )
 }
