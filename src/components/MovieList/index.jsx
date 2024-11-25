@@ -8,7 +8,24 @@ import SectionMovie from "./sectionMovie"
 export default function MovieList() {
   const [movies, setMovies] = useState([])
   const [series, setSeries] = useState([])
+  const [search, setSearch] = useState("")
 
+  // function handleSubmit(e) {
+  //   e.preventDefault()
+  //   console.log(search)
+  //   if (!search) return
+  //   axios({
+  //     method: "get",
+  //     url: "h:ttps://api.themoviedb.org/3/search/movie",
+  //     params: {
+  //       api_key: "5d4c9804b35cfb018be78e1bd80fd807",
+  //       language: "pt-br",
+  //     },
+  //   }).then((response) => {
+  //     setMovies(response.data.results)
+  //     console.log(response.data.results)
+  //   })
+  // }
   useEffect(() => {
     getMovies()
     getSeries()
@@ -46,14 +63,18 @@ export default function MovieList() {
     <div className="bg-zinc-800 flex-1 pl-[13%]">
       <header className="flex justify-between p-6">
         <div className="w-full flex justify-center ">
-          <div className="flex w-2/4 bg-zinc-700 gap-5 px-6 py-3 rounded-2xl">
-            <Search className="text-zinc-500" />
+          <form className="flex w-2/4 bg-zinc-700 gap-5 px-6 py-3 rounded-2xl">
+            <button type="submit">
+              <Search className="text-zinc-500 cursor-pointer" />
+            </button>
             <input
               type="text"
+              onChange={(event) => setSearch(event.target.value)}
+              value={search}
               className="w-full bg-transparent outline-none text-zinc-50"
               placeholder="Search any movies"
             />
-          </div>
+          </form>
         </div>
         <div className="flex gap-6 items-center">
           <Bell className="text-zinc-50" />
