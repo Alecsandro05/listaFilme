@@ -4,9 +4,9 @@ import { Bell, CircleCheck, Heart } from "lucide-react"
 
 export function Navbar() {
   return (
-    <nav className="bg-zinc-950 w-[220px]  text-white ">
+    <nav className="fixed inset-0 bg-zinc-950 w-[12%] h-screen  text-white ">
       <div className="flex flex-col items-center py-6">
-        <h1 className="text-2xl font-bold">DXX.MOVIES</h1>
+        <h1 className="text-2xl font-bold">LECSMOVIES</h1>
       </div>
       <div>
         <ul className="flex flex-col px-9 space-y-6 py-10">
