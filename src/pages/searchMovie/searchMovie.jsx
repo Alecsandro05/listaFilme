@@ -1,6 +1,6 @@
 // import { useSearchParams } from "react-router-dom"
 import { useSearchParams } from "react-router-dom"
-import SearchElement from "../../components/SearchElement"
+
 import { useEffect, useState } from "react"
 import axios from "axios"
 import { Navbar } from "../MovieList/Navbar"
@@ -27,14 +27,11 @@ export function SearchMovie() {
   }
   useEffect(() => {
     getSearchedMovies()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   return (
     <div className="bg-zinc-800 overflow-x-hidden pl-[13%]">
       <Navbar />
-      <div className="pt-8">
-        <SearchElement />
-      </div>
+      <div className="pt-8"></div>
       <h2 className="text-center text-4xl text-zinc-50 mt-6 pt-6">
         Resultados para:{" "}
         <span className="text-yellow-400">{query.toLocaleUpperCase()}</span>
