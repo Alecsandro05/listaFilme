@@ -27,6 +27,7 @@ export function SearchMovie() {
   }
   useEffect(() => {
     getSearchedMovies()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   return (
     <div className="bg-zinc-800 overflow-x-hidden pl-[13%]">
