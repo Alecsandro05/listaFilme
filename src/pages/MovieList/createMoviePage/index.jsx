@@ -1,11 +1,10 @@
 import axios from "axios"
-import { Bell, User } from "lucide-react"
+import { Bell, Search, User } from "lucide-react"
 import { useEffect, useState } from "react"
 import SectionMovie from "./sectionMovie"
 import movieImage from "/src/assets/movie.webp"
 import { Navbar } from "../Navbar"
 import { useNavigate } from "react-router-dom"
-import { SearchElement } from "../../../components/SearchElement"
 
 export function CreateMoviePage() {
   const navigate = useNavigate()
@@ -56,11 +55,23 @@ export function CreateMoviePage() {
       <Navbar />
       <div className="bg-zinc-800 flex-1 pl-[13%]">
         <header className="flex justify-between p-6">
-          <SearchElement
-            handleSubmit={handleSubmit}
-            setSearch={setSearch}
-            search={search}
-          />
+          <div className="w-full flex justify-center items-center ml-6">
+            <form
+              onSubmit={handleSubmit}
+              className="flex w-2/4 bg-zinc-700 gap-5 px-6 py-3 rounded-2xl"
+            >
+              <button type="submit">
+                <Search className="text-zinc-500 cursor-pointer" />
+              </button>
+              <input
+                type="text"
+                onChange={(event) => setSearch(event.target.value)}
+                value={search}
+                className="w-full bg-transparent outline-none text-zinc-50"
+                placeholder="Search any movies"
+              />
+            </form>
+          </div>
           <div className="flex gap-6 items-center">
             <Bell className="text-zinc-50" />
             <User className="text-zinc-50" />
