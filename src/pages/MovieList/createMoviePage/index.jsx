@@ -5,7 +5,6 @@ import SectionMovie from "./sectionMovie"
 import movieImage from "/src/assets/movie.webp"
 import { Navbar } from "../Navbar"
 import { useNavigate } from "react-router-dom"
-// import { SearchElement } from "/components/SearchElement"
 
 import SearchElement from "../../../components/SearchElement"
 export default function CreateMoviePage() {
@@ -21,17 +20,6 @@ export default function CreateMoviePage() {
 
     navigate(`/search?=${search}`)
     setSearch("")
-    // axios({
-    //   method: "get",
-    //   url: "h:ttps://api.themoviedb.org/3/search/movie",
-    //   params: {
-    //     api_key: "5d4c9804b35cfb018be78e1bd80fd807",
-    //     language: "pt-br",
-    //   },
-    // }).then((response) => {
-    //   setMovies(response.data.results)
-    //   console.log(response.data.results)
-    // })
   }
   useEffect(() => {
     getMovies()
