@@ -31,9 +31,8 @@ export default function SectionMovie({ movies, nameSections }) {
                 />
               </div>
               <div className="  flex flex-col space-y-2">
-                <span className="text-zinc-50 font-semibold ">
-                  {name || title}
-                </span>
+                <h2 className="text-zinc-50 font-semibold ">{name || title}</h2>
+                <p></p>
               </div>
             </div>
           )
