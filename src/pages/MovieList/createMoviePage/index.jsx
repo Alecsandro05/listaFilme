@@ -5,9 +5,9 @@ import SectionMovie from "./sectionMovie"
 import movieImage from "/src/assets/movie.webp"
 import { Navbar } from "../Navbar"
 import { useNavigate } from "react-router-dom"
+import { SearchElement } from "../../../components/SearchElement"
 
-import SearchElement from "../../../components/SearchElement"
-export default function CreateMoviePage() {
+export function CreateMoviePage() {
   const navigate = useNavigate()
   const [movies, setMovies] = useState([])
   const [series, setSeries] = useState([])

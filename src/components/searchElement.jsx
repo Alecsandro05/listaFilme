@@ -1,6 +1,6 @@
 import { Search } from "lucide-react"
 
-export default function SearchElement({ handleSubmit, setSearch, search }) {
+export function SearchElement({ handleSubmit, setSearch, search }) {
   return (
     <div className="w-full flex justify-center items-center ml-6">
       <form
@@ -21,3 +21,4 @@ export default function SearchElement({ handleSubmit, setSearch, search }) {
     </div>
   )
 }
+export default SearchElement

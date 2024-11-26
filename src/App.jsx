@@ -1,6 +1,6 @@
-import CreateMoviePage from "./pages/MovieList/createMoviePage"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import { SearchMovie } from "./pages/searchMovie/searchMovie"
+import { CreateMoviePage } from "./pages/MovieList/createMoviePage"
 
 const router = createBrowserRouter([
   {
